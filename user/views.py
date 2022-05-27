@@ -15,7 +15,7 @@ def sign_up_view(request):
         password = request.POST.get('password', None)
         if len(password) < 8:
             return redirect('/index')
-        elif '@' not in email:
+        elif '@' not in str(email):
             return redirect('/index')
         else:
             pw_hash = hashlib.sha256(password.encode('utf-8')).hexdigest()

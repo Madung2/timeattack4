@@ -138,6 +138,7 @@
 
 <div class="container">
     <form class="form-area" method="post" action ='/sign-up/'>
+        {% csrf_token %}
 
         <div class="box2">
         <input id="email" type="text" name="email" placeholder="이메일 주소">
