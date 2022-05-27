@@ -7,7 +7,7 @@ class UserClass(models.Model):
     class Meta:
         db_table = "my_user"
 
-    def __init__(self,email,password):
+    def __init__(self, email, password):
         """회원가입 속성 초기화"""
 
         self.email = models.CharField(max_length=20, null=False)
